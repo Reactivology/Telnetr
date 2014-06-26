@@ -5,12 +5,12 @@ namespace Reactivology.Telnetr.Models {
     public class SizeSeriesDetails {
         public string Donations { get; set; }
 
-        public ICollection<double> Sizes { get; private set; }
+        public ICollection<long> Sizes { get; private set; }
 
         public ICollection<string> Symbols { get; private set; }
 
         public SizeSeriesDetails() {
-            Sizes = new HashSet<double>();
+            Sizes = new HashSet<long>();
             Symbols = new HashSet<string>();
         }
 
