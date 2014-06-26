@@ -9,9 +9,8 @@ namespace Reactivology.Telnetr {
 
         public static IObservable<Ohlcv> Connect(this TelnetrClient client, params object[] values) {
             foreach(var value in values) {
-                client.Subscribe(value as dynamic);
+                client.Connect(value as dynamic);
             }
-
             return (IObservable<Ohlcv>)client;
         }
 
